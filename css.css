@@ -93,7 +93,7 @@ FONT {
   position: relative;
   height: 100vh;
   width: 100%;
-  //border: solid 1px red;
+  /* border: solid 1px red; */ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,4 +133,8 @@ FONT {
   height: 200px !important;
   width: 200px !important;
   background: red;
+}
+
+table{
+  border: 1rem ridge gray;
 }
