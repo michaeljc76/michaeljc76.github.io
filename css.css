@@ -5,6 +5,8 @@ html, body {
   height: 100%;
 }
 
+
+
 A:link,
 A:active {
  font:14px verdana,sans-serif;
@@ -56,6 +58,16 @@ FONT {
  color:#fff;
  font-weight:normal
 }
+main{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+iframe{
+  position: relative;
+}
+
+
 .text {
  font:9px verdana,sans-serif;
  color:#ccc;
@@ -84,10 +96,17 @@ FONT {
  color:#666
 }
 .large {
-  font:40px garamond;
+  font: 3rem Georgia;
   color:ccc;
   font-weight:normal
 }
+.resume{
+  font: 3rem Georgia;
+  display: flex;
+  justify-content: center;
+}
+
+
 
 #container {
   position: relative;
@@ -98,35 +117,32 @@ FONT {
   justify-content: center;
   align-items: center;
 }
-
 #wrapper {
   background-color: #00;
   min-height: 100%;
   height: auto !important;
   margin-bottom: -120px; /* the bottom margin is the negative value of the footer's total height */
 }
-
 #wrapper:after {
   content: "";
   display: block;
   height: 120px; /* the footer's total height */
 }
-
 #content {
   height: 100%;
 }
-
 #footer {
   height: 50px;
 }
-
 #footer-content {
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
   background-color: #00;
   border: 0px solid #ffffff;
   height: 110px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
   padding: 2px;
 }
-
 .slide {
   display: block;
   position: absolute;
