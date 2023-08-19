@@ -104,6 +104,7 @@ iframe{
   font: 3rem Georgia;
   display: flex;
   justify-content: center;
+  margin: 1rem;
 }
 
 
@@ -137,11 +138,14 @@ iframe{
 #footer-content {
   bottom: 10px;
   left: 10px;
-  position: absolute;
   background-color: #00;
   border: 0px solid #ffffff;
   height: 110px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
   padding: 2px;
+}
+#frame{
+  width:50rem;
+  height:65rem;
 }
 .slide {
   display: block;
