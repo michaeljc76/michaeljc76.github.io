@@ -131,9 +131,13 @@ iframe{
  color: #666;
 }
 .large {
-  font: 3rem Georgia;
-  color: ccc;
+  font: 3rem verdana,arial,helvetica,sans-serif;
+  color: #fff;
   font-weight: normal;
+}
+.medium{
+  font: 1rem verdana,arial,helvetica,sans-serif;
+  color: #fff;
 }
 .resume{
   font: 3rem Georgia;
