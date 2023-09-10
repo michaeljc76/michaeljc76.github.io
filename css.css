@@ -28,16 +28,18 @@ html, body {
   display: none;
 }
 .splash-header{
+  font-family: Helvetica;
+  font-size: 2rem;
   font-weight: 400;
   color: gray;
-  font: 2rem Georgia;
   display: flex;
   flex-direction: row;
 }
 .name{
+  font-family: Helvetica;
+  font-size: 2rem;
   font-weight: 400;
   color: black;
-  font: 2rem Georgia;
 }
 .headimg{
   padding-left: 3rem;
@@ -105,6 +107,9 @@ main{
 }
 iframe{
   position: relative;
+}
+table{
+  border: 0px;
 }
 
 
