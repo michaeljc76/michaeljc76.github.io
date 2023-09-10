@@ -182,7 +182,7 @@ table{
 #footer-content {
   bottom: 10px;
   left: 10px;
-  background-color: #00;
+  background-color: transparent;
   border: 0px solid #ffffff;
   height: 110px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
   padding: 2px;
@@ -197,4 +197,11 @@ table{
   height: 200px !important;
   width: 200px !important;
   background: red;
+}
+
+/* THREE JS */
+canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
 }

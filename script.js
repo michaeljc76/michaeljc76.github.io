@@ -1,3 +1,6 @@
+import './css.css'
+import * as THREE from 'three';
+
 var splashScreen = document.querySelector('.splash');
 
 function hideSplashScreen() {
@@ -18,20 +21,14 @@ splashScreen.addEventListener('click',()=>{
 })
 */
 
-/*
-$("#container").mousemove(function(e) {
-  parallaxIt(e, ".slide", -100);
-  parallaxIt(e, "img", -30);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(100, window.innerWidth/window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({
+  canvas: document.querySelector('#bg'),
 });
 
-function parallaxIt(e, target, movement) {
-  var $this = $("#container");
-  var relX = e.pageX - $this.offset().left;
-  var relY = e.pageY - $this.offset().top;
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(window.innerWidth, window.innerHeight);
+camera.position.setZ(30);
 
-  TweenMax.to(target, 1, {
-    x: (relX - $this.width() / 2) / $this.width() * movement,
-    y: (relY - $this.height() / 2) / $this.height() * movement
-  });
-}
-*/
+renderer.render(scene, camera);
