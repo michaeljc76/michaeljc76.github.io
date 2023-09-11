@@ -22,6 +22,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 .hidden{
   transition: 0.5s;
@@ -101,9 +102,8 @@ FONT {
  font-weight: normal;
 }
 main{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  position: relative;
+  z-index: 2;
 }
 iframe{
   position: relative;
@@ -177,7 +177,11 @@ table{
   height: 100%;
 }
 #footer {
+  position: absolute;
   height: 50px;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
 }
 #footer-content {
   bottom: 10px;
@@ -204,4 +208,5 @@ canvas{
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
