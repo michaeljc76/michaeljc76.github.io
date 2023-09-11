@@ -14,6 +14,15 @@
 <body marginwidth="0" marginheight="0">
 
   <script src="script.js" type="module"></script>
+  <script type="importmap">
+    {
+        "imports": {
+            "three": "./build/three.module.js",
+            "three/examples/jsm/controls/OrbitControls":"./jsm/controls/OrbitControls.js",
+            "three/examples/jsm/libs/stats.module":"./jsm/libs/stats.module.js",
+        }
+    }
+  </script>
 
   <canvas id="bg"></canvas>
 
