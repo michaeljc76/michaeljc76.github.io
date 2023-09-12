@@ -2,19 +2,6 @@ import './css.css'
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 
-/* CORS */
-
-const express = require('express');
-const app = express();
-
-const cors = require('cors');
-
-app.use(cors({origin:'https://michaeljc.dev'}))
-
-app.get('/', (req, res) => {
-  res.statis(200).json({title: 'hello world'});
-})
-
 /* SPLASHSCREEN */
 
 var splashScreen = document.querySelector('.splash');
@@ -60,6 +47,8 @@ scene.add(plane);
 const pointer = new THREE.Vector2();
 const raycaster = new THREE.Raycaster();
 
+const vec = new THREE.Vector3();
+
 const onMouseMove = (event) => {
   pointer.x = (event.clientX/window.innerWidth) * 2 - 1;
   pointer.y = -(event.clientY/window.innerHeight) * 2 + 1;
@@ -67,14 +56,13 @@ const onMouseMove = (event) => {
   plane.rotation.y = pointer.x/20;
   plane.rotation.x = -pointer.y/20;
 
+  vec.set(-pointer.x, -pointer.y, plane.position.z);
+
+  plane.position.lerp(vec, 0.5);
+  console.log(plane.position);
+
   raycaster.setFromCamera(pointer, camera);
   const intersects = raycaster.intersectObjects(scene.children);
-
-  console.log(pointer.x)
-  console.log(pointer.y)
-  console.log(plane.rotation.x)
-  console.log(plane.rotation.y)
-  console.log("SPLIT")
 
   // for(let i = 0; i < intersects.length; i++){
   //   console.log(intersects);

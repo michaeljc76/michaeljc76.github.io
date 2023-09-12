@@ -2,6 +2,7 @@
   "name": "michaeljc76.github.io",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://michaeljc76.dev",
   "type": "module",
   "scripts": {
     "dev": "vite",
