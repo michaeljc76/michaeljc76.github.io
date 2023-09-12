@@ -1,14 +1,27 @@
-import "./css.css"
-import * as THREE from "three";
-import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
+import './css.css'
+import * as THREE from 'three';
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+
+/* CORS */
+
+const express = require('express');
+const app = express();
+
+const cors = require('cors');
+
+app.use(cors({origin:'https://michaeljc.dev'}))
+
+app.get('/', (req, res) => {
+  res.statis(200).json({title: 'hello world'});
+})
 
 /* SPLASHSCREEN */
 
-var splashScreen = document.querySelector(".splash");
+var splashScreen = document.querySelector('.splash');
 function hideSplashScreen() {
   splashScreen.style.opacity = 0;
   setTimeout(()=>{
-    splashScreen.classList.add("hidden")
+    splashScreen.classList.add('hidden')
   }, 610)
 }
 
