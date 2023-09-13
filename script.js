@@ -14,15 +14,6 @@ function hideSplashScreen() {
 
 setTimeout(hideSplashScreen, 1000);
 
-/*
-splashScreen.addEventListener('click',()=>{
-  splashScreen.style.opacity = 0;
-  setTimeout(()=>{
-    splashScreen.classList.add('hidden')
-  }, 610)
-})
-*/
-
 /* THREE JS */
 
 const scene = new THREE.Scene();
@@ -33,6 +24,7 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setClearColor(0x000000, 0.5);
 camera.position.setZ(30);
 renderer.render(scene, camera);
 

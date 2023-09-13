@@ -38,7 +38,7 @@ html, body {
   display: flex;
   flex-direction: row;
 }
-.name{
+.splash-name{
   font-family: Helvetica;
   font-size: 2rem;
   font-weight: 400;
@@ -46,7 +46,25 @@ html, body {
 }
 .headimg{
   padding-left: 3rem;
+  padding-right: 3rem;
   padding-top: 2rem;
+  user-select: none;
+}
+.header-text{
+  padding-top: 2rem;
+  display: flex;
+  user-select: none;
+  flex-direction: column;
+}
+.pages{
+  padding-top: 0.8rem;
+}
+.pageimg{
+  border: solid white 1px;
+}
+.content{
+  padding-top: 2rem;
+  padding-left: 15%;
 }
 
 
@@ -103,15 +121,15 @@ FONT {
  color: #fff;
  font-weight: normal;
 }
+header{
+  display: flex;
+}
 main{
   position: relative;
   z-index: 2;
 }
 iframe{
   position: relative;
-}
-table{
-  border: 0px;
 }
 
 
@@ -137,12 +155,12 @@ table{
  font: 9px verdana,arial,helvetica,sans-serif;
  color: #666;
 }
-.large {
+.name {
   font: 3rem verdana,arial,helvetica,sans-serif;
   color: #fff;
   font-weight: normal;
 }
-.medium{
+.subtext{
   font: 1rem verdana,arial,helvetica,sans-serif;
   color: #fff;
 }
@@ -165,7 +183,7 @@ table{
   align-items: center;
 }
 #wrapper {
-  background-color: #00;
+  background-color: transparent;
   min-height: 100%;
   height: auto !important;
   margin-bottom: -120px; /* the bottom margin is the negative value of the footer's total height */
@@ -175,23 +193,14 @@ table{
   display: block;
   height: 120px; /* the footer's total height */
 }
-#content {
-  height: 100%;
-}
 #footer {
   position: absolute;
-  height: 50px;
+  height: 110px;
   bottom: 0;
   left: 0;
-  z-index: 2;
-}
-#footer-content {
-  bottom: 10px;
-  left: 10px;
-  background-color: transparent;
-  border: 0px solid #ffffff;
-  height: 110px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
-  padding: 2px;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  z-index: 1;
 }
 #frame{
   width:50rem;
