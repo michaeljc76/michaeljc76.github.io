@@ -9,6 +9,7 @@ html, body {
   height: 100%;
   cursor: crosshair;
   overflow: hidden;
+  background-image: url('0edit3.jpg');
 }
 .splash{
   position: fixed;
