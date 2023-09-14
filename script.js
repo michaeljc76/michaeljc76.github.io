@@ -25,13 +25,13 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x000000, 0.5);
-camera.position.setZ(30);
+camera.position.setZ(70);
 renderer.render(scene, camera);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enabled = false;
 
-const planeGeo = new THREE.PlaneGeometry(140, 65);
+const planeGeo = new THREE.PlaneGeometry(window.innerWidth * 0.175, window.innerHeight * 0.175);
 const planeMat = new THREE.MeshBasicMaterial({ color: 0xFFFFFF, wireframe: true});
 const plane = new THREE.Mesh(planeGeo, planeMat);
 scene.add(plane);
