@@ -2,23 +2,6 @@ import './css.css'
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 
-/* SPLASHSCREEN */
-
-var path = window.location.pathname;
-var page = path.split("/").pop();
-
-if(page == "index.html"){
-  var splashScreen = document.querySelector('.splash');
-  function hideSplashScreen() {
-    splashScreen.style.opacity = 0;
-    setTimeout(()=>{
-      splashScreen.classList.add('hidden')
-    }, 610)
-  }
-
-  setTimeout(hideSplashScreen, 1000);
-}
-
 /* THREE JS */
 
 const scene = new THREE.Scene();
