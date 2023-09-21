@@ -4,15 +4,20 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 
 /* SPLASHSCREEN */
 
-var splashScreen = document.querySelector('.splash');
-function hideSplashScreen() {
-  splashScreen.style.opacity = 0;
-  setTimeout(()=>{
-    splashScreen.classList.add('hidden')
-  }, 610)
-}
+var path = window.location.pathname;
+var page = path.split("/").pop();
 
-setTimeout(hideSplashScreen, 1000);
+if(page == "index.html"){
+  var splashScreen = document.querySelector('.splash');
+  function hideSplashScreen() {
+    splashScreen.style.opacity = 0;
+    setTimeout(()=>{
+      splashScreen.classList.add('hidden')
+    }, 610)
+  }
+
+  setTimeout(hideSplashScreen, 1000);
+}
 
 /* THREE JS */
 
@@ -51,8 +56,7 @@ const onMouseMove = (event) => {
   vec.set(-pointer.x, -pointer.y, plane.position.z);
 
   plane.position.lerp(vec, 0.5);
-  console.log(plane.position);
-
+  
   raycaster.setFromCamera(pointer, camera);
   const intersects = raycaster.intersectObjects(scene.children);
 
