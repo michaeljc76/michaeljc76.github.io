@@ -1,23 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 <head>
-  <link rel="shortcut icon" type="images/mc2.png" href="/images/mc2.png">
+  <link rel = "shortcut icon" type = "images/mc2.png" href="images/mc2.png">
   <title>Michael J. Crowley</title>
-  <link rel = "stylesheet" href="../css.css">
-  <script src="../script.js" type="module"></script>
+  <link rel = "stylesheet" href = "/css.css" type = "text/css">
+  <!-- <script type = "importmap">
+    {
+      "imports": {
+        "css": "/css.css",
+        "three": "/node_modules/three/build/three.module.js",
+        "three/": "/node_modules/three/",
+        "OrbitControls": "/node_modules/three/examples/jsm/controls/OrbitControls"
+      }
+    }
+  </script> -->
+  <script src = "/script.js" type = "module"></script>
+  <script src = "/splashscreen.js" type = "module"></script>
 </head>
 
 <body>
-  <canvas id = "bg"></canvas>
+  <canvas id="bg"></canvas>
   <main>
+    <div class="splash">
+      <h1 class="splash-header">
+        <div class="splash-name">Michael Crowley</div>&nbsp;Portfolio
+      </h1>
+    </div>
     <div id ="wrapper">
       <header>
-        <img class = "headimg" src="/images/mc4.png" height="100" width="100">
+        <img class = "headimg" src="images/mc4.png" height="100" width="100">
         <div class = "header-text">
-          <div class = "name">
+          <div class="name">
             Michael Crowley
           </div>
-          <div class = "subtext">
+          <div class="subtext">
             Designer and Full Stack Developer
           </div>
           <br>
@@ -34,24 +50,24 @@
       </header>
 
       <div class = 'content'>
+        <span class="red">*personal sight</span>
         <div class="title">
-          Contact Information:
+          febuary 01, 2023 : 4:20pm --- <span class="text">(michael)</span>
         </div>
-		    <br>
+        <br>
         <div class="ver10">
-          Email: michaeljcrow76@gmail.com <br><br>
-          Phone: +1-202-344-6987 <br><br>
-          Github:<br><br>
+          k.. website's up! <a href="https://michaeljc.dev" class="ver10" target="_blank">MY GITHUB!</a><br>
+          <br>
+          THANKS TO EVERYONE VISITING!
         </div>
-		    <a href="#" onclick='window.open("https://github.com/michaeljc76");return false;'><img src="/images/git.gif" alt="GITHUB" height="100" width="100"></img></a> &emsp;
       </div>
     </div>
   </main>
 
   <footer id="footer">
-    <img src="/images/pyro.jpg" alt="pyro" height="50" width="50"><br>
-    <a href="https://soundcloud.com/user-874225783" target="_blank"><img src="/images/winter.jpg" alt="WINTER" height="50" width="50"></a>&nbsp;&nbsp;
+    <img src="images/pyro.jpg" alt="pyro" height="50" width="50"><br>
+    <a href="https://soundcloud.com/user-874225783" target="_blank"><img src="images/winter.jpg" alt="WINTER" height="50" width="50"></a>&nbsp;&nbsp;
   </footer>
-  
+
 </body>
 </html>
