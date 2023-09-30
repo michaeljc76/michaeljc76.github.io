@@ -1,6 +1,8 @@
 import '/css.css'
 import * as THREE from '/node_modules/three/build/three.module.js';
 import {OrbitControls} from '/node_modules/three/examples/jsm/controls/OrbitControls.js';
+import Swup from 'swup';
+const swup = new Swup();
 
 /* THREE JS */
 
@@ -12,7 +14,7 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(0x000000, 0.5);
+renderer.setClearColor(0x000000, 0);
 camera.position.setZ(70);
 renderer.render(scene, camera);
 
