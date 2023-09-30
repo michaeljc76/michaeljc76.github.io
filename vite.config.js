@@ -8,6 +8,11 @@ export default defineConfig({
       input: {
         index: resolve(__dirname, 'index.html'),
         contact: resolve(__dirname, 'contact.html'),
+
+        projects: resolve(__dirname, 'resume.html'),
+        kiro: resolve(__dirname, 'kiro.html'),
+
+        resume: resolve(__dirname, 'resume.html'),
       },
     },
   },
