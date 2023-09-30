@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url(fonts/NeueMontreal-Regular.otf);
+}
+
 :root{
   --bgcolor: rgba(0, 100, 100, 1);
 }
@@ -18,8 +23,6 @@ html, body {
   top: 0px;
   left: 0px;
   background-color: rgba(225, 225, 225, 1);
-  font-weight: 400;
-  font-size: 2rem;
   transition: all ease-in-out 500ms;
   display: flex;
   justify-content: center;
@@ -31,17 +34,17 @@ html, body {
   display: none;
 }
 .splash-header{
-  font-family: Helvetica;
+  font-family: 'NeueMontreal', sans-serif;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 300;
   color: gray;
   display: flex;
   flex-direction: row;
 }
 .splash-name{
-  font-family: Helvetica;
+  font-family: 'NeueMontreal', sans-serif;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 300;
   color: black;
 }
 .headimg{
@@ -49,12 +52,14 @@ html, body {
   padding-right: 3rem;
   padding-top: 2rem;
   user-select: none;
+  z-index: 2;
 }
 .header-text{
   padding-top: 2rem;
   display: flex;
   user-select: none;
   flex-direction: column;
+  z-index: 2;
 }
 .pages{
   padding-top: 0.8rem;
@@ -158,16 +163,16 @@ iframe{
  color: #666;
 }
 .name {
-  font: 3rem verdana,arial,helvetica,sans-serif;
+  font: 3rem 'NeueMontreal', verdana,arial,helvetica,sans-serif;
   color: #fff;
   font-weight: normal;
 }
 .subtext{
-  font: 1rem verdana,arial,helvetica,sans-serif;
+  font: 1rem 'NeueMontreal', verdana,arial,helvetica,sans-serif;
   color: #fff;
 }
 .resume{
-  font: 3rem Georgia;
+  font: 3rem 'NeueMontreal', verdana,arial,helvetica,sans-serif;
   display: flex;
   justify-content: center;
   margin: 1rem;

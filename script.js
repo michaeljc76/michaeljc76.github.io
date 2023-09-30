@@ -14,17 +14,12 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(0x000000, 0);
+renderer.setClearColor(0x000000, 1);
 camera.position.setZ(70);
 renderer.render(scene, camera);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enabled = false;
-
-const planeGeo = new THREE.PlaneGeometry(window.innerWidth * 0.175, window.innerHeight * 0.175);
-const planeMat = new THREE.MeshBasicMaterial({ color: 0xFFFFFF, wireframe: true});
-const plane = new THREE.Mesh(planeGeo, planeMat);
-scene.add(plane);
 
 const pointer = new THREE.Vector2();
 const raycaster = new THREE.Raycaster();
@@ -49,6 +44,13 @@ const onMouseMove = (event) => {
   //   console.log(intersects);
   // }
 }
+
+// Texture mapping and background geometry
+const bgTexture = new THREE.TextureLoader().load('bg.png')
+const planeGeo = new THREE.PlaneGeometry(window.innerWidth * 0.175, window.innerHeight * 0.175);
+const planeMat = new THREE.MeshBasicMaterial({map: bgTexture, transparent: true});
+const plane = new THREE.Mesh(planeGeo, planeMat);
+scene.add(plane);
 
 window.addEventListener('mousemove', onMouseMove);
 
