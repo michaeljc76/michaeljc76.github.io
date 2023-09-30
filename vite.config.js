@@ -11,6 +11,7 @@ export default defineConfig({
 
         projects: resolve(__dirname, 'projects.html'),
         kiro: resolve(__dirname, 'kiro.html'),
+        expenseTracker: resolve(__dirname, 'https://michaeljc.dev/Expense-Tracker/'),
 
         resume: resolve(__dirname, 'resume.html'),
       },
