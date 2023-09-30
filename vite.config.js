@@ -9,7 +9,7 @@ export default defineConfig({
         index: resolve(__dirname, 'index.html'),
         contact: resolve(__dirname, 'contact.html'),
 
-        projects: resolve(__dirname, 'resume.html'),
+        projects: resolve(__dirname, 'projects.html'),
         kiro: resolve(__dirname, 'kiro.html'),
 
         resume: resolve(__dirname, 'resume.html'),
