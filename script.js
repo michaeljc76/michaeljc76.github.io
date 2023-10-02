@@ -2,6 +2,7 @@ import '/css.css'
 import * as THREE from '/node_modules/three/build/three.module.js';
 import {OrbitControls} from '/node_modules/three/examples/jsm/controls/OrbitControls.js';
 import Swup from 'swup';
+import bg from '/bg.png';
 const swup = new Swup();
 
 /* THREE JS */
@@ -46,7 +47,7 @@ const onMouseMove = (event) => {
 }
 
 // Texture mapping and background geometry
-const bgTexture = new THREE.TextureLoader().load('/bg.png')
+const bgTexture = new THREE.TextureLoader().load(bg);
 const planeGeo = new THREE.PlaneGeometry(window.innerWidth * 0.175, window.innerHeight * 0.175);
 const planeMat = new THREE.MeshBasicMaterial({map: bgTexture, transparent: true});
 const plane = new THREE.Mesh(planeGeo, planeMat);
