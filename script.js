@@ -47,12 +47,20 @@ const onMouseMove = (event) => {
   // }
 }
 
-// Texture mapping and background geometry
+// Texture mapping and geometry for plane
 const bgTexture = new THREE.TextureLoader().load(bg);
 const planeGeo = new THREE.PlaneGeometry(window.innerWidth * 0.175, window.innerHeight * 0.175);
 const planeMat = new THREE.MeshBasicMaterial({map: bgTexture, transparent: true});
 const plane = new THREE.Mesh(planeGeo, planeMat);
 scene.add(plane);
+
+// Texture mapping and geometry for sphere
+// const sphereGeo = new THREE.SphereGeometry(800);
+// const sphereMat = new THREE.MeshNormalMaterial();
+// const sphere = new THREE.Mesh(sphereGeo, sphereMat);
+// scene.add(sphere);
+// sphere.position.setZ();
+// sphere.position.setX(-400);
 
 window.addEventListener('mousemove', onMouseMove);
 
@@ -69,15 +77,3 @@ window.onresize = function(e){
 
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
-
-// let oldx = 0;
-// let oldy = 0;
-// window.onmousemove = function(ev){
-//   let changex = ev.x - oldx;
-//   let changey = ev.y - oldy;
-//   plane.rotation.x += changey/1000;
-//   plane.rotation.y += changex/1000;
-
-//   oldx = ev.x;
-//   oldy = ev.y;
-// }

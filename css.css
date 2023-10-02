@@ -228,6 +228,12 @@ html.is-leaving .transition-fade {
   width:50rem;
   height:65rem;
 }
+
+/* THREE JS */
+#globe{
+  left: 20%;
+}
+
 .slide {
   display: block;
   position: absolute;
