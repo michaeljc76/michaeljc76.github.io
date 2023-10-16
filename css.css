@@ -78,27 +78,27 @@ html, body {
 A:link,
 A:active {
  font: 14px verdana,sans-serif;
- color: #fff;
+ color: #333;
  font-weight: bold;
  text-decoration: none;
  cursor: crosshair;
 }
 A:visited {
  font: 14px verdana,sans-serif;
- color: #fff;
+ color: #333;
  font-weight: bold;
  text-decoration: none;
 }
 A:hover {
  font: 14px verdana,sans-serif;
- color: #666;
+ color: #ccc;
  font-weight: bold;
- background-color: #e7eef4;
+ background-color: #333;
 }
 A.ver10:link,
 A:active {
- font: 10px verdana,sans-serif;
- color: #50aef6;
+ font: 14px verdana,sans-serif;
+ color: #fff;
  font-weight: bold;
  text-decoration: none;
 }
@@ -124,7 +124,7 @@ TH,
 .BOD,
 FONT {
  font: 9px verdana,sans-serif;
- color: #fff;
+ color: #000;
  font-weight: normal;
 }
 header{
@@ -142,17 +142,17 @@ iframe{
 
 .text {
  font: 9px verdana,sans-serif;
- color: #ccc;
+ color: #333;
  font-weight: normal;
 }
 .title {
  font: 14px verdana,arial,helvetica,sans-serif;
- color: #ccc;
+ color: #333;
  font-weight: normal;
 }
 .ver10 {
  font: 11px verdana,arial,helvetica,sans-serif;
- color: #fff;
+ color: #000;
 }
 .red {
  font: 10px verdana,arial,helvetica,sans-serif;
@@ -164,15 +164,16 @@ iframe{
 }
 .name {
   font: 3rem 'NeueMontreal', verdana,arial,helvetica,sans-serif;
-  color: #fff;
+  color: #333;
   font-weight: normal;
 }
 .subtext{
   font: 1rem 'NeueMontreal', verdana,arial,helvetica,sans-serif;
-  color: #fff;
+  color: #333;
 }
 .resume{
   font: 3rem 'NeueMontreal', verdana,arial,helvetica,sans-serif;
+  color: #333;
   display: flex;
   justify-content: center;
   margin: 1rem;
