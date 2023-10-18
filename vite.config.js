@@ -13,6 +13,8 @@ export default defineConfig({
         kiro: resolve(__dirname, 'kiro.html'),
 
         resume: resolve(__dirname, 'resume.html'),
+
+        globe: resolve(__dirname, 'models/wireframe_earth.glb')
       },
     },
   },
