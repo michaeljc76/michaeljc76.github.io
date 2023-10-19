@@ -20,19 +20,19 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enablePan = false;
 controls.enableZoom = false;
 
-let earth;
-loader.load('models/wireframe_earth2.gltf', function ( glb ) {
-    earth = glb;
+// let earth;
+// loader.load('models/wireframe_earth2.gltf', function ( glb ) {
+//     earth = glb;
 
-    const mesh = glb.scene
-    mesh.scale.set(15, 15, 15);
-    scene.add( mesh );
+//     const mesh = glb.scene
+//     mesh.scale.set(15, 15, 15);
+//     scene.add( mesh );
     
-}, undefined, function ( error ) {
+// }, undefined, function ( error ) {
 
-	console.error( error );
+// 	console.error( error );
 
-} );
+// } );
 
 //window.addEventListener('mousemove', onMouseMove);
 
