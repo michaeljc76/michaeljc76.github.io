@@ -2,6 +2,7 @@ import '/css.css'
 import * as THREE from '/node_modules/three/build/three.module.js';
 import {OrbitControls} from '/node_modules/three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import GLOBE from 'models/wireframe_earth2.gltf'
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 1000);
@@ -21,7 +22,7 @@ controls.enablePan = false;
 controls.enableZoom = false;
 
 let earth;
-loader.load('models/wireframe_earth2.gltf', function ( glb ) {
+loader.load( GLOBE , function ( glb ) {
     earth = glb;
 
     const mesh = glb.scene
