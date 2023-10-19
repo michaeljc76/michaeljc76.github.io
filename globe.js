@@ -2,6 +2,7 @@ import '/css.css'
 import * as THREE from '/node_modules/three/build/three.module.js';
 import {OrbitControls} from '/node_modules/three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import gsap from 'gsap';
 import GLOBE from '/models/wireframe_earth.glb'
 
 const scene = new THREE.Scene();
@@ -20,6 +21,8 @@ renderer.render(scene, camera);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enablePan = false;
 controls.enableZoom = false;
+controls.minPolarAngle = Math.PI/2;
+controls.maxPolarAngle = Math.PI/2;
 
 let earth;
 loader.load( GLOBE , function ( glb ) {
@@ -27,8 +30,8 @@ loader.load( GLOBE , function ( glb ) {
 
     const mesh = glb.scene
     mesh.scale.set(15, 15, 15);
+    mesh.position.set(0, 100, 0);
     scene.add( mesh );
-    
 }, undefined, function ( error ) {
 
 	console.error( error );
@@ -41,6 +44,30 @@ loader.load( GLOBE , function ( glb ) {
  //scene.add( light );
 
 // window.addEventListener('mousemove', onMouseMove);
+
+// SHOW AND HIDE GLOBE SCRIPTS
+
+const hideButtons = document.getElementsByClassName('hideGlobe');
+for(var i = 0; i < hideButtons.length; i++){
+  hideButtons[i].addEventListener( 'click', hideGlobe, false );
+}
+//hideButton.addEventListener( 'click', hideGlobe, false );
+
+const showButtons = document.getElementsByClassName('showGlobe');
+for(var i = 0; i < showButtons.length; i++){
+  showButtons[i].addEventListener( 'click', showGlobe, false );
+}
+//showButton.addEventListener( 'click', showGlobe, false );
+
+function showGlobe(){
+  gsap.to(earth.scene.position, {y: 0, duration: 0.5});
+  //earth.scene.position.lerp(new THREE.Vector3(0, 0, 0), 0.1);
+}
+
+function hideGlobe(){
+  gsap.to(earth.scene.position, {y: 100, duration: 0.5});
+  //earth.scene.position.lerp(new THREE.Vector3(0, 100, 0), 0.1);
+}
 
 function animate(){
     if (earth) {

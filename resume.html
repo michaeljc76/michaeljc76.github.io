@@ -5,6 +5,7 @@
   <title>Michael J. Crowley</title>
   <link rel="stylesheet" href="./css.css">
   <script src="./script.js" type="module"></script>
+  <script src = "/globe.js" type="module"></script>
 </head>
 
 <header>
@@ -18,25 +19,24 @@
     </div>
     <br>
     <div class = "pages">
-      <a href="/index.html" alt="HOME">&nbsp;HOME&nbsp;</a>
-      &emsp; <a href="/contact.html" alt="CONTACT">&nbsp;CONTACT&nbsp;</a>
-      &emsp; <a href="/projects.html" alt="PROJECTS">&nbsp;PROJECTS&nbsp;</a>
-      &emsp; <a href="/resume.html" alt="RESUME">&nbsp;RESUME&nbsp;</a>
+      <a href="/index.html" alt="HOME" class="hideGlobe">&nbsp;HOME&nbsp;</a>
+      &emsp; <a href="/contact.html" alt="CONTACT" class="showGlobe">&nbsp;CONTACT&nbsp;</a>
+      &emsp; <a href="/projects.html" alt="PROJECTS" class="hideGlobe">&nbsp;PROJECTS&nbsp;</a>
+      &emsp; <a href="/resume.html" alt="RESUME" class="hideGlobe">&nbsp;RESUME&nbsp;</a>
     </div>
   </div>
 </header>
 
 <body>
   <canvas id = "bg"></canvas>
+  <canvas id = 'globe'></canvas>
   <main id="swup" class="transition-fade">
-    <div id ="wrapper">
       <div class="resume">
         Resume
       </div>
       <div class ="resume">
         <iframe src="https://drive.google.com/file/d/1sHSnvP1yBi9bKhTDV1M3Qm9KdvWP0_Jm/preview" type="application/pdf" id="frame"></iframe>
       </div>
-    </div>
   </main>
   
   <footer id="footer">
