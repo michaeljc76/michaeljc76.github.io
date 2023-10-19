@@ -19,10 +19,10 @@
     </div>
     <br>
     <div class = "pages">
-      <a href="/index.html" alt="HOME" class="hideGlobe">&nbsp;HOME&nbsp;</a>
-      &emsp; <a href="/contact.html" alt="CONTACT" class="showGlobe">&nbsp;CONTACT&nbsp;</a>
-      &emsp; <a href="/projects.html" alt="PROJECTS" class="hideGlobe">&nbsp;PROJECTS&nbsp;</a>
-      &emsp; <a href="/resume.html" alt="RESUME" class="hideGlobe">&nbsp;RESUME&nbsp;</a>
+      <a href="/index.html" alt="HOME" class="homebutton">&nbsp;HOME&nbsp;</a>
+      &emsp; <a href="/contact.html" alt="CONTACT" class="contactbutton">&nbsp;CONTACT&nbsp;</a>
+      &emsp; <a href="/projects.html" alt="PROJECTS" class="projectsbutton">&nbsp;PROJECTS&nbsp;</a>
+      &emsp; <a href="/resume.html" alt="RESUME" class="resumebutton">&nbsp;RESUME&nbsp;</a>
     </div>
   </div>
 </header>
@@ -30,6 +30,19 @@
 <body>
   <canvas id = "bg"></canvas>
   <canvas id="globe"></canvas>
+
+  <video
+    id = 'blink'
+    playsinline
+    muted
+    loop
+    autoplay
+    width = "1920"
+    height = "1080"
+    src = "/models/textures/blink.mp4"
+    style = "display: none"
+  ></video>
+
   <main id="swup" class="transition-fade">
     <div id ="wrapper">
       <div class = "content">
