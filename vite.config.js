@@ -14,7 +14,7 @@ export default defineConfig({
 
         resume: resolve(__dirname, 'resume.html'),
 
-        globe: resolve(__dirname, 'models/wireframe_earth2.gltf')
+        globe: resolve(__dirname, 'public/models/wireframe_earth2.gltf')
       },
     },
   },
