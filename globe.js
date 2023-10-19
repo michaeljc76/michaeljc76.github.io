@@ -35,6 +35,11 @@ loader.load( GLOBE , function ( glb ) {
 
 } );
 
+ const ambientlight = new THREE.AmbientLight( 0xffffff, 0.2);
+ //const light = new THREE.PointLight( 0xffffff, 10, 100)
+ scene.add( ambientlight );
+ //scene.add( light );
+
 // window.addEventListener('mousemove', onMouseMove);
 
 function animate(){
