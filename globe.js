@@ -21,7 +21,7 @@ controls.enablePan = false;
 controls.enableZoom = false;
 
 let earth;
-loader.load('models/wireframe_earth.glb', function ( glb ) {
+loader.load('models/wireframe_earth2.gltf', function ( glb ) {
     earth = glb;
 
     const mesh = glb.scene
