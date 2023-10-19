@@ -18,5 +18,5 @@ export default defineConfig({
       },
     },
   },
-  assetsInclude: ['models/wireframe_earth2.gltf']
+  assetsInclude: ['models/wireframe_earth.glb']
 })
