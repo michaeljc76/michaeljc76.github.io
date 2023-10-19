@@ -14,7 +14,8 @@ html, body {
   height: 100%;
   cursor: crosshair;
   overflow: auto;
-  background-image: url('0edit3.jpg');
+  /* background-image: url('0edit3.jpg'); */
+  background-color: #E6E6E6;
 }
 .splash{
   position: fixed;
