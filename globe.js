@@ -99,7 +99,7 @@ resumeButton.addEventListener( 'click', () => {
 
 function showGlobe(){
   gsap.to(earth.scene.position, {y: 0, duration: 0.5});
-  controls.reset();
+  setTimeout(function(){controls.reset()}, 150);
 }
 
 function hideGlobe(){
@@ -108,9 +108,9 @@ function hideGlobe(){
 
 function showComputer(){
   gsap.to(computer.scene.position, {y: -8, duration: 0.5});
-  controls.reset();
-  camera.rotation.set(-Math.PI/6, Math.PI/10, 0);
-  camera.position.set(17, 22, 40);
+  setTimeout(function(){controls.reset()}, 150);
+  setTimeout(function(){camera.rotation.set(-Math.PI/6, Math.PI/10, 0)}, 200);
+  setTimeout(function(){camera.position.set(17, 22, 40)}, 200);
   gsap.to(videoScreen.position, {y: 3.1, duration: 0.5});
 } 
 
