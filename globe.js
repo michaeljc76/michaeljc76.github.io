@@ -69,14 +69,6 @@ videoScreen.position.set(0, 100, -0.6);
 const ambientlight = new THREE.AmbientLight( 0xffffff, 0.2);
 scene.add( ambientlight );
 
-// SCRIPT TO GET CURRENT PAGE NAME
-
-var page = window.location.pathname.split("/").pop();
-//console.log("test");
-if(page == "contact"){
-  console.log("on contact");
-}
-
 // SCRIPTS TO SHOW AND HIDE GLOBE
 
 const homeButton = document.querySelector('.homebutton');
@@ -128,15 +120,26 @@ function hideComputer(){
 
 }
 
+let knowPage = false;
+
 function animate(){
-    if (earth) {
-        earth.scene.rotation.y += 0.001;
+  if (earth) {
+      earth.scene.rotation.y += 0.001;
+  }
+
+  if (earth && computer) {
+    // Check if on contact or projects and load gltf
+    if (knowPage == false) {
+      checkPage();
+      knowPage = true;
     }
+  }
 
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
   controls.update;
 }
+
 animate();
 
 window.onresize = function(e){
@@ -144,4 +147,20 @@ window.onresize = function(e){
   camera.updateProjectionMatrix();
 
   renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+// SCRIPT TO GET CURRENT PAGE NAME
+
+function checkPage() {
+  var page = window.location.pathname.split("/").pop();
+  if(page == "contact.html"){
+    console.log("on contact");
+    showGlobe();
+    hideComputer();
+  }
+  if(page == "projects.html"){
+    console.log("on projects");
+    hideGlobe();
+    showComputer();
+  }
 }
