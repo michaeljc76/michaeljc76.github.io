@@ -69,6 +69,14 @@ videoScreen.position.set(0, 100, -0.6);
 const ambientlight = new THREE.AmbientLight( 0xffffff, 0.2);
 scene.add( ambientlight );
 
+// SCRIPT TO GET CURRENT PAGE NAME
+
+var page = window.location.pathname.split("/").pop();
+//console.log("test");
+if(page == "contact"){
+  console.log("on contact");
+}
+
 // SCRIPTS TO SHOW AND HIDE GLOBE
 
 const homeButton = document.querySelector('.homebutton');
