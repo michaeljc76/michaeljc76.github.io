@@ -4,6 +4,7 @@ import {OrbitControls} from '/node_modules/three/examples/jsm/controls/OrbitCont
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import gsap from 'gsap';
 import GLOBE from '/models/wireframe_earth5.glb'
+import CLOUDS from '/models/clouds.glb'
 import COMPUTER from '/models/computer.glb'
 
 const scene = new THREE.Scene();
@@ -31,7 +32,17 @@ loader.load( GLOBE , function ( glb ) {
     const mesh = glb.scene
     mesh.scale.set(15, 15, 15);
     mesh.position.set(0, 100, 0);
-    mesh.AmbientLight;
+    scene.add( mesh );
+}, undefined, function ( error ) {
+	console.error( error );
+} );
+
+let clouds;
+loader.load( CLOUDS , function ( glb ) {
+    clouds = glb;
+    const mesh = glb.scene
+    mesh.scale.set(15, 15, 15);
+    mesh.position.set(0, 100, 0);
     scene.add( mesh );
 }, undefined, function ( error ) {
 	console.error( error );
@@ -100,11 +111,13 @@ resumeButton.addEventListener( 'click', () => {
 
 function showGlobe(){
   gsap.to(earth.scene.position, {y: 0, duration: 0.5});
+  gsap.to(clouds.scene.position, {y: 0, duration: 0.5});
   setTimeout(function(){controls.reset()}, 150);
 }
 
 function hideGlobe(){
   gsap.to(earth.scene.position, {y: 100, duration: 0.5});
+  gsap.to(clouds.scene.position, {y: 100, duration: 0.5});
 }
 
 function showComputer(){
@@ -126,6 +139,9 @@ let knowPage = false;
 function animate(){
   if (earth) {
       earth.scene.rotation.y += 0.001;
+  }
+  if (clouds) {
+    clouds.scene.rotation.y -= 0.001;
   }
 
   if (earth && computer) {
