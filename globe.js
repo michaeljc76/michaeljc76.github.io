@@ -31,12 +31,11 @@ loader.load( GLOBE , function ( glb ) {
     const mesh = glb.scene
     mesh.scale.set(15, 15, 15);
     mesh.position.set(0, 100, 0);
+    mesh.AmbientLight;
     scene.add( mesh );
 }, undefined, function ( error ) {
 	console.error( error );
 } );
-
-mesh.MeshBasicMaterial(glb);
 
 let computer;
 loader.load( COMPUTER , function ( glb ) {
