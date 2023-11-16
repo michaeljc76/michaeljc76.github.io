@@ -3,7 +3,7 @@ import * as THREE from '/node_modules/three/build/three.module.js';
 import {OrbitControls} from '/node_modules/three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import gsap from 'gsap';
-import GLOBE from '/models/wireframe_earth.glb'
+import GLOBE from '/models/wireframe_earth5.glb'
 import COMPUTER from '/models/computer.glb'
 
 const scene = new THREE.Scene();
@@ -35,6 +35,8 @@ loader.load( GLOBE , function ( glb ) {
 }, undefined, function ( error ) {
 	console.error( error );
 } );
+
+mesh.MeshBasicMaterial(glb);
 
 let computer;
 loader.load( COMPUTER , function ( glb ) {
