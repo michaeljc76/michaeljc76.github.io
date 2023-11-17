@@ -49,7 +49,8 @@ const onMouseMove = (event) => {
 
 // Texture mapping and geometry for plane
 const bgTexture = new THREE.TextureLoader().load(bg);
-const planeGeo = new THREE.PlaneGeometry(window.innerWidth * 0.175, window.innerHeight * 0.175);
+// const planeGeo = new THREE.PlaneGeometry(window.innerWidth * 0.175, window.innerHeight * 0.175);
+const planeGeo = new THREE.PlaneGeometry(320, 180);
 const planeMat = new THREE.MeshBasicMaterial({map: bgTexture, transparent: true});
 const plane = new THREE.Mesh(planeGeo, planeMat);
 scene.add(plane);

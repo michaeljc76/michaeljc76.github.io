@@ -51,7 +51,7 @@ html, body {
 .headimg{
   padding-left: 3rem;
   padding-right: 2rem;
-  padding-top: 2rem;
+  padding-top: 2.5rem;
   user-select: none;
   z-index: 2;
 }
