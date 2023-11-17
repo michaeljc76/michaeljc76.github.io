@@ -115,7 +115,7 @@ animate();
 
 function checkPage() {
   var page = window.location.pathname.split("/").pop();
-  if(page == "index.html" || page == "michaeljc.dev"){
+  if(page == "index.html" || page == ""){
     console.log("on home");
     showPlane();
   }
