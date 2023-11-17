@@ -178,7 +178,7 @@ iframe{
   color: #333;
   display: flex;
   justify-content: center;
-  margin: 1rem;
+  margin-top: 3rem;
 }
 .projecthead {
   font: 16px verdana,arial,helvetica,sans-serif;
