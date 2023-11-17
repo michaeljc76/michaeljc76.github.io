@@ -3,9 +3,9 @@ import * as THREE from '/node_modules/three/build/three.module.js';
 import {OrbitControls} from '/node_modules/three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import gsap from 'gsap';
-import GLOBE from '/models/wireframe_earth5.glb'
-import CLOUDS from '/models/clouds.glb'
-import COMPUTER from '/models/computer.glb'
+import GLOBE from '/models/wireframe_earth5.glb';
+import CLOUDS from '/models/clouds.glb';
+import COMPUTER from '/models/computer.glb';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 1000);

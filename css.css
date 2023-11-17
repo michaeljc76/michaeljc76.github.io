@@ -50,7 +50,7 @@ html, body {
 }
 .headimg{
   padding-left: 3rem;
-  padding-right: 3rem;
+  padding-right: 2rem;
   padding-top: 2rem;
   user-select: none;
   z-index: 2;
