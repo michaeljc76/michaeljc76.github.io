@@ -112,6 +112,7 @@ resumeButton.addEventListener( 'click', () => {
 function showGlobe(){
   gsap.to(earth.scene.position, {y: 0, duration: 0.5});
   gsap.to(clouds.scene.position, {y: 0, duration: 0.5});
+  controls.enabled = true;
   setTimeout(function(){controls.reset()}, 150);
 }
 
@@ -122,6 +123,7 @@ function hideGlobe(){
 
 function showComputer(){
   gsap.to(computer.scene.position, {y: -8, duration: 0.5});
+  controls.enabled = false;
   setTimeout(function(){controls.reset()}, 150);
   setTimeout(function(){camera.rotation.set(-Math.PI/6, Math.PI/10, 0)}, 200);
   setTimeout(function(){camera.position.set(17, 22, 40)}, 200);

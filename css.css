@@ -134,7 +134,8 @@ header{
 }
 main{
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  width: 60%;
 }
 iframe{
   position: relative;
@@ -218,6 +219,7 @@ html.is-leaving .transition-fade {
   margin-bottom: -120px; /* the bottom margin is the negative value of the footer's total height */
   padding-left: 5%;
   width: 50%;
+  z-index: 3;
 }
 #wrapper:after {
   content: "";
