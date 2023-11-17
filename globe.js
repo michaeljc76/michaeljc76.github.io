@@ -143,10 +143,11 @@ function animate(){
       earth.scene.rotation.y += 0.001;
   }
   if (clouds) {
-    clouds.scene.rotation.y -= 0.001;
+    clouds.scene.rotation.y += 0.0005;
+    clouds.scene.rotation.x += 0.00005;
   }
 
-  if (earth && computer) {
+  if (earth && clouds && computer) {
     // Check if on contact or projects and load gltf
     if (knowPage == false) {
       checkPage();

@@ -1,6 +1,7 @@
 import '/css.css'
 import * as THREE from '/node_modules/three/build/three.module.js';
 import {OrbitControls} from '/node_modules/three/examples/jsm/controls/OrbitControls.js';
+import gsap from 'gsap';
 import Swup from 'swup';
 import bg from '/bg2.png';
 
@@ -37,7 +38,7 @@ const onMouseMove = (event) => {
 
   vec.set(-pointer.x, -pointer.y, plane.position.z);
 
-  plane.position.lerp(vec, 0.5);
+  plane.position.lerp(plane.position, 0.5);
   
   raycaster.setFromCamera(pointer, camera);
   const intersects = raycaster.intersectObjects(scene.children);
@@ -63,14 +64,67 @@ scene.add(plane);
 // sphere.position.setZ();
 // sphere.position.setX(-400);
 
+// Mouse Tracking
 window.addEventListener('mousemove', onMouseMove);
 
+const homeButton = document.querySelector('.homebutton');
+const contactButton = document.querySelector('.contactbutton');
+const projectsButton = document.querySelector('.projectsbutton');
+const resumeButton = document.querySelector('.resumebutton');
+
+homeButton.addEventListener( 'click', () => {
+  showPlane();
+}, false );
+
+contactButton.addEventListener( 'click', () => {
+  hidePlane();
+}, false );
+
+projectsButton.addEventListener( 'click', () => {
+  hidePlane();
+}, false );
+
+resumeButton.addEventListener( 'click', () => {
+  hidePlane();
+}, false );
+
+function showPlane() {
+  gsap.to(plane.position, {y: 0, duration: 0.5});
+}
+
+function hidePlane() {
+  gsap.to(plane.position, {y: -250, duration: 0.5});
+}
+
+let knowPage = false;
+
 function animate(){
+  if (plane) {
+    // Check if on contact or projects and load gltf
+    if (knowPage == false) {
+      checkPage();
+      knowPage = true;
+    }
+  }
+
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
   controls.update;
 }
 animate();
+
+function checkPage() {
+  var page = window.location.pathname.split("/").pop();
+  if(page == "index.html"){
+    console.log("on home");
+    showPlane();
+  }
+  else {
+    console.log("off home");
+    hidePlane();
+  }
+}
+
 
 window.onresize = function(e){
   camera.aspect = window.innerWidth/window.innerHeight;
