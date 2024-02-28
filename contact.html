@@ -46,14 +46,42 @@
   <main id="swup" class="transition-fade">
     <div id ="wrapper">
       <div class = 'content'>
-        <div class="title">
-          Get In Touch:
-        </div>
 		    <br>
-        <div class="ver10">
-          Email: <!--email_off-->michaeljcrow76@gmail.com<!--/email_off--> <br><br>
-          <br>
+        <div class="cf-form">
+          <form id = "cf-id" class = "cf-class" method = "post" action = "cf-process.php">
+
+            <div class="contact-title">
+              Get In Touch
+            </div>
+
+            <div class = "cf-group">
+              <label for = "Name" class = "cf-label">Your Name:</label>
+              <div class = "cf-input-group">
+                <input type = "text" id = "Name" name = "Name" class = "cf-form-control" required>
+              </div>
+            </div>
+
+            <div class = "cf-group">
+              <label for = "Email" class = "cf-label">Your Email:</label>
+              <div class = "cf-input-group">
+                <input type = "email" id = "Email" name = "Name" class = "cf-form-control" required>
+              </div>
+            </div>
+
+            <div class = "cf-group">
+              <label for = "Message" class = "cf-label">Message:</label>
+              <div class = "cf-input-group">
+                <textarea id = "Message" name = "Message" class = "cf-form-control" rows = "6" maxlength = "3000" required></textarea>
+              </div>
+            </div>
+
+            <div class="cf-group">
+              <button type="submit" id="cf-button" class="cf-btn cf-btn-primary cf-btn-lg cf-btn-block">Send Message</button>
+            </div>
+
+          </form>
         </div>
+        
 		    <a href="#" onclick='window.open("https://github.com/michaeljc76");return false;'><img src="/images/git.png" alt="GITHUB" height="60" width="60"></img></a> &emsp;
 		    <a href="#" onclick='window.open("https://www.linkedin.com/in/mjcrow/");return false;'><img src="/images/linkedin.png" alt="GITHUB" height="60" width="60"></img></a>
       </div>
