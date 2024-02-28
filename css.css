@@ -66,6 +66,9 @@ html, body {
   padding-top: 0.8rem;
   z-index: 2;
 }
+.pageimg{
+  border: solid white 1px;
+}
 .content{
   padding-top: 2rem;
   padding-left: 15%;
