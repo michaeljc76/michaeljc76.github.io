@@ -195,7 +195,7 @@ iframe{
   font: 14px verdana,arial,helvetica,sans-serif;
   color: #333;
   font-weight: bold;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .cf-body {
