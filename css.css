@@ -177,8 +177,13 @@ iframe{
   font: 3rem 'NeueMontreal', verdana,arial,helvetica,sans-serif;
   color: #333;
   display: flex;
-  justify-content: center;
-  margin-top: 3rem;
+  justify-content: left;
+  margin-top: 2rem;
+  margin-left: 10rem;
+}
+.resume-img {
+  height: 70%;
+  width: 70%;
 }
 .projecthead {
   font: 16px verdana,arial,helvetica,sans-serif;
